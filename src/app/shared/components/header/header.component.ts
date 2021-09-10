@@ -2,7 +2,10 @@ import { Component, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-header',
-  templateUrl: './header.component.html',
+  template: `<mat-toolbar>
+                   <span>Mi Tienda Online</span>
+                </mat-toolbar>
+               `,
   styleUrls: ['./header.component.scss']
 })
 
