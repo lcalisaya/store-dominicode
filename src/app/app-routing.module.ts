@@ -1,11 +1,12 @@
 import { NgModule, Component } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { LuciaComponent } from './pages/lucia/lucia.component';
 
 //Las rutas se ejecutan por orden de definición
 const routes: Routes = [
-  {path: 'laruta', component: LuciaComponent},
+  //{path: 'laruta', component: LuciaComponent},
+  { path: 'products', loadChildren: () => import('./pages/products/products.module').then(m => m.ProductsModule) },
   //{path: '**', component:LuciaComponent },
+  //Para responses por code 404:
   {path: '**', redirectTo: '', pathMatch: 'full'}
 ];
 
