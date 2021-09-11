@@ -1,1 +1,13 @@
-<p>product works!</p>
+<mat-card class="card">
+    <mat-card-header>
+        <mat-card-title>{{miProducto.name}}</mat-card-title>
+    </mat-card-header>
+    <mat-card-content>
+    {{miProducto.description}}
+    </mat-card-content>
+    <mat-card-actions>
+        <button mat-flat-button color="primary">
+            Buy {{miProducto.price | currency}}
+            <mat-icon>shopping_basket</mat-icon></button>
+    </mat-card-actions>
+</mat-card>
