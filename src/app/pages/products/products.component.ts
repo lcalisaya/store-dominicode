@@ -7,6 +7,7 @@ import { tap } from 'rxjs/operators';
   templateUrl: './products.component.html',
   styleUrls: ['./products.component.scss']
 })
+
 export class ProductsComponent implements OnInit {
   products!: Product[];
   constructor(private productsService: ProductsService ) { }
