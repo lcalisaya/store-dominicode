@@ -4,6 +4,7 @@
 
 <section class="products">
     <app-product 
+        (addToCartClick) = "agregarACarrito($event)"
         [miProducto]="producto" 
         *ngFor="let producto of products"
     >

@@ -20,5 +20,9 @@ export class ProductsComponent implements OnInit {
       .subscribe();
   }
 
+  agregarACarrito(product:Product): void{
+    console.log("ver: ", product);
+  }
+
 }
 
