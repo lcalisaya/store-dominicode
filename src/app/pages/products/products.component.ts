@@ -5,7 +5,16 @@ import { ProductsService } from './services/products.service';
 import { tap } from 'rxjs/operators'; 
 @Component({
   selector: 'app-products',
-  templateUrl: './products.component.html',
+  template: `
+              <section class="products">
+                <app-product 
+                    (addToCartClick) = "agregarACarrito($event)"
+                    [miProducto]="producto" 
+                    *ngFor="let producto of products"
+                >
+                </app-product>
+            </section>
+             `,
   styleUrls: ['./products.component.scss']
 })
 
