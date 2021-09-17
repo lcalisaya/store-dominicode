@@ -1,11 +1,12 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-header',
   template: `<mat-toolbar>
-              <span>Mi Tienda Online</span>
+              <a [routerLink]="['/']"><span>Mi Tienda Online</span></a>
               <span class="spacer"></span>
-              <app-cart></app-cart>
+              <app-cart class="mouseHover" (click)="goToCheckout()"></app-cart>
             </mat-toolbar>
             `,
   styleUrls: ['./header.component.scss']
@@ -13,9 +14,13 @@ import { Component, OnInit } from '@angular/core';
 
 export class HeaderComponent implements OnInit {
 
-  constructor() { }
+  constructor(private router: Router) { }
 
   ngOnInit(): void {
+  }
+
+  goToCheckout(): void {  
+    this.router.navigate(['/checkout']);
   }
 
 }
