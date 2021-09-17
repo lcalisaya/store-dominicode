@@ -1,1 +1,19 @@
-<p>checkout works!</p>
+<!-- template de formulario driven -->
+
+<div class="container">
+    <form action="">
+        <mat-form-field>
+            <input 
+            matInput
+            placeholder="Name"
+            required
+            [(ngModel)]="model.name"
+            name="name"
+            #name="ngModel"
+            />
+            <mat-error *ngIf="!name.valid || name.pristine">
+                Name is required
+            </mat-error>
+        </mat-form-field>
+    </form>
+</div>

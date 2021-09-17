@@ -6,7 +6,12 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./checkout.component.scss']
 })
 export class CheckoutComponent implements OnInit {
-
+  model = {
+    name: "",
+    store: "",
+    shippingAddress: "",
+    city: ""
+  }
   constructor() { }
 
   ngOnInit(): void {
