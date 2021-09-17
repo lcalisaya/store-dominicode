@@ -1,0 +1,37 @@
+.container {
+  min-width: 150px;
+  max-width: 500px;
+  width: 100%;
+  background-color: black;
+  color: white;
+
+  display: flex;
+  align-items: center;
+  padding: 1rem 5rem;
+
+  .item {
+    flex: 1 1 auto;
+  }
+
+  .form {
+    width: 100%;
+  }
+
+  .form__element {
+    padding: 5px 0px 25px 2px;
+    width: 100%;
+    margin-bottom: 0.5rem;
+  }
+}
+
+.container__button {
+  display: flex;
+  align-items: center;
+
+  min-width: 150px;
+  max-width: 660px;
+
+  button {
+    width: 100%;
+  }
+}
