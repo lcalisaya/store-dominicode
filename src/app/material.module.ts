@@ -4,6 +4,8 @@ import { MatCardModule } from "@angular/material/card";
 import { MatButtonModule } from "@angular/material/button";
 import { MatIconModule } from "@angular/material/icon";
 import { MatFormFieldModule} from "@angular/material/form-field";
+import { MatRadioModule } from "@angular/material/radio";
+import { MatInputModule } from '@angular/material/input';
 //Módulo de Material
 //Decorador que marca el comportamiento de la clase de abajo
 @NgModule({
@@ -12,7 +14,9 @@ import { MatFormFieldModule} from "@angular/material/form-field";
         MatCardModule,
         MatButtonModule,
         MatIconModule,
-        MatFormFieldModule
+        MatFormFieldModule,
+        MatRadioModule,
+        MatInputModule
     ]
 })
 

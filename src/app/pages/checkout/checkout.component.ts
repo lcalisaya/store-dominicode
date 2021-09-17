@@ -7,7 +7,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class CheckoutComponent implements OnInit {
   model = {
-    name: "",
+    name: "lorena",
     store: "",
     shippingAddress: "",
     city: ""
@@ -15,6 +15,10 @@ export class CheckoutComponent implements OnInit {
   constructor() { }
 
   ngOnInit(): void {
+  }
+
+  onpickupordelivery(value: boolean): void {
+    console.log(value);
   }
 
 }

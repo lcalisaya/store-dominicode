@@ -18,4 +18,5 @@ import { MaterialModule } from 'src/app/material.module';
     MaterialModule
   ]
 })
+
 export class ProductsModule { }
