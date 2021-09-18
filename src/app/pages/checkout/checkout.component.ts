@@ -5,6 +5,7 @@ import { switchMap, tap } from 'rxjs/operators';
 import { DataService } from 'src/app/shared/services/data.service';
 import { Store } from 'src/app/shared/interfaces/store.interface';
 import { Details } from 'src/app/shared/interfaces/order.interface';
+import { NgForm } from '@angular/forms';
 
 @Component({
   selector: 'app-checkout',
@@ -37,12 +38,12 @@ export class CheckoutComponent implements OnInit {
     this.isDelivery = value;
   }
 
-  onSubmit({value: formData}: ngForm): void{
+  onSubmit({value: formData}: NgForm): void{
     //Recuperamos los valores del formulario en value
     const data = {
       ... formData,
       date: this.getCurrentDate(),
-      pickup: this.isDelivery
+      isDelivery: this.isDelivery
     }
 
     this.dataSrv.saveOrder(data).pipe(
@@ -70,12 +71,11 @@ export class CheckoutComponent implements OnInit {
 
   private prepareDetails(): Details[] {
     const details: Details[] = [];
-    this.cart.forEach(res => {
-      
-
-      
+    this.cart.forEach((product: Product) => {
+      const {id:productId, name:productName, qty:quantity, stock} = product;
+      details.push({productId, productName, quantity});
     })
-    return details
+    return details;
   }
 
   private getDataCart(): void{

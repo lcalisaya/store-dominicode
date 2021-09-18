@@ -1,137 +1,267 @@
 {
-    "stores": [
-      {
+  "stores": [
+    {
+      "id": 1,
+      "name": "San Carlos de Bariloche",
+      "address": "Pueyrredón 2324 Balvanera",
+      "city": "Buenos Aires",
+      "openingHours": "10:00 - 14:00 y 17:00 - 20:30"
+    },
+    {
+      "id": 2,
+      "name": "Plaza San Martín",
+      "address": "Alcalá 2541 Villa Crespo",
+      "city": "Santa Cruz",
+      "openingHours": "10:00 - 14:00 y 17:00 - 20:30"
+    },
+    {
+      "id": 3,
+      "name": "El rincón de los Norteños",
+      "address": "125 Chambers Street",
+      "city": "Australia",
+      "openingHours": "10:00 - 14:00 y 17:00 - 20:30"
+    },
+    {
+      "id": 4,
+      "name": "Luna en Escorpio",
+      "address": "Carlos Casares 8932",
+      "city": "Gregorio de Laferrere",
+      "openingHours": "10:00 - 14:00 y 17:00 - 20:30"
+    },
+    {
+      "id": 5,
+      "name": "La Tierra redonda en el Siglo XXI",
+      "address": "Av. Libertad 1199",
+      "city": "Santiago del Estero",
+      "openingHours": "10:00 - 14:00 y 17:00 - 20:30"
+    }
+  ],
+  "categories": [
+    {
+      "id": 1,
+      "name": "Indumentaria"
+    },
+    {
+      "id": 2,
+      "name": "Electrónica"
+    },
+    {
+      "id": 3,
+      "name": "Computadoras"
+    }
+  ],
+  "products": [
+    {
+      "id": 1,
+      "name": "Cable Unipolar Argenplas Normalizado Iram 2.5mm X Rollo 100m",
+      "price": 45,
+      "description": "CABLE UNIPOLAR 2.5MM ARGENPLAS - NORMA IRAM 247-3 - EL MEJOR CABLE - CALIDAD INDISCUTIDA. ROLLO DE 50 METROS.",
+      "categoryId": 1,
+      "stock": 0
+    },
+    {
+      "id": 2,
+      "name": "Auriculares Negros Con Cable - Tedge",
+      "price": 5,
+      "description": "Con estos pequeños aparatos podés transportar música a cualquier lugar y atender cualquier llamada con su micrófono incorporado. Su gran autonomía de funcionamiento, su control táctil y su compacta caja de carga lo vuelven el elegido por una amplia gama de público.",
+      "categoryId": 1,
+      "stock": 10
+    },
+    {
+      "id": 3,
+      "name": "Mochila Cartera Mujer Urbana Eco Cuero Varios Colores",
+      "price": 17,
+      "description": "Mochila Cartera Trendy Boca de pez.  Medidas: 36 x 26 x 18 cm, confeccionado con tela altamente reforzada anti desgarre y amplio compartimiento central, bolsillo frontal con cierre, interior forrado, logo TRENDY frontal. Bolsillos laterales",
+      "categoryId": 1,
+      "stock": 10
+    },
+    {
+      "id": 4,
+      "name": "Muñeca Viuda Negra 30 Cm Marvel Hasbro",
+      "price": 19,
+      "description": "Con esta figura inspirada en el personaje del Universo Marvel- los fans pueden imaginar al poderoso Vengador enfrentando villanos en una batalla por el destino del mundo",
+      "categoryId": 2,
+      "stock": 10
+    },
+    {
+      "id": 5,
+      "name": "Jeans Mujer Sisa Black Clasico Chupin Tiro Alto",
+      "price": 399,
+      "description": "Jean negro clásico tiro alto, elastizado de excelente calce, es chupin largo arriba del tobillo, marca Sisa. Estos jeans se destacan por la comodidad, y porque los podés combinar con distintos outfits, zapatillas, sandalias, o con lo que mas te guste.",
+      "categoryId": 2,
+      "stock": 10
+    },
+    {
+      "id": 6,
+      "name": "Almohada Viscoelástica Multiflex Relax Pack 2 Unidades",
+      "price": 7,
+      "description": "Mejora la postura. Diseño anatómico. Funda de tela de algodón. Ayuda a la relajación muscular. Es Ideal para tener una postura cómoda y correcta mientras miras televisión o lees.-",
+      "categoryId": 2,
+      "stock": 10
+    },
+    {
+      "id": 7,
+      "name": "Marcador Trabi Chalk Vidrio Tiza Liquida 2mm A 6mm",
+      "price": 32,
+      "description": "Marcador de tinta pigmentada altamente opaca con un rendimiento superior resistente al agua y a la decoloración, para usar en cartón, metal, plástico, vidrio, madera, goma, piedra, etc. Además, permite pintar sobre otra pintura sin que se traspase.",
+      "categoryId": 3,
+      "stock": 10
+    },
+    {
+      "id": 8,
+      "name": "Campera Micro Polar C/ Capucha Aradia Montagne SportLine",
+      "price": 20,
+      "description": "Esta prenda es una excelente segunda piel por sus propiedades térmicas. Con muy poco volumen brinda confort y mantiene la temperatura corporal. Posee un tratamiento antippilling en su cara externa que mantiene por más tiempo el aspecto original de la prenda.",
+      "categoryId": 3,
+      "stock": 10
+    }
+  ],
+  "orders": [
+    {
+      "id": 1,
+      "name": "Natalia Calisaya",
+      "date": "01/06/2020",
+      "shippingAddress": "Av. Corrales 1718",
+      "city": "Córdoba",
+      "pickup": true
+    },
+    {
+      "name": "Lucía del Pilar Calisaya",
+      "shippingAddress": "Lópe de Vega 2686",
+      "city": "Rafael Castillo",
+      "date": "18/9/2021",
+      "pickup": true,
+      "id": 2
+    },
+    {
+      "name": "Ariel Figueroa",
+      "store": {
         "id": 1,
         "name": "San Carlos de Bariloche",
         "address": "Pueyrredón 2324 Balvanera",
         "city": "Buenos Aires",
         "openingHours": "10:00 - 14:00 y 17:00 - 20:30"
       },
-      {
-        "id": 2,
-        "name": "Plaza San Martín",
-        "address": "Alcalá 2541 Villa Crespo",
-        "city": "Santa Cruz",
-        "openingHours": "10:00 - 14:00 y 17:00 - 20:30"
-      },
-      {
-        "id": 3,
-        "name": "El rincón de los Norteños",
-        "address": "125 Chambers Street",
-        "city": "Australia",
-        "openingHours": "10:00 - 14:00 y 17:00 - 20:30"
-      },
-      {
-        "id": 4,
-        "name": "Luna en Escorpio",
-        "address": "Carlos Casares 8932",
-        "city": "Gregorio de Laferrere",
-        "openingHours": "10:00 - 14:00 y 17:00 - 20:30"
-      },
-      {
+      "date": "18/9/2021",
+      "pickup": false,
+      "id": 3
+    },
+    {
+      "name": "Lucía del Pilar Calisaya",
+      "shippingAddress": "Lópe de Vega 2686",
+      "city": "Rafael Castillo",
+      "date": "18/9/2021",
+      "pickup": true,
+      "id": 4
+    },
+    {
+      "name": "Pedro Flores",
+      "shippingAddress": "Lópe de Vega 2686",
+      "city": "Rafael Castillo",
+      "date": "18/9/2021",
+      "isDelivery": true,
+      "id": 5
+    },
+    {
+      "name": "Lucía del Pilar Calisaya",
+      "store": {
         "id": 5,
         "name": "La Tierra redonda en el Siglo XXI",
         "address": "Av. Libertad 1199",
         "city": "Santiago del Estero",
         "openingHours": "10:00 - 14:00 y 17:00 - 20:30"
-      }
-    ],
-    "categories": [
-      {
-        "id": 1,
-        "name": "Indumentaria"
       },
-      {
-        "id": 2,
-        "name": "Electrónica"
-      },
-      {
-        "id": 3,
-        "name": "Computadoras"
-      }
-    ],
-    "products": [
-      {
-        "id": 1,
-        "name": "Cable Unipolar Argenplas Normalizado Iram 2.5mm X Rollo 100m",
-        "price": 45,
-        "description": "CABLE UNIPOLAR 2.5MM ARGENPLAS - NORMA IRAM 247-3 - EL MEJOR CABLE - CALIDAD INDISCUTIDA. ROLLO DE 50 METROS.",
-        "categoryId": 1,
-        "stock": 0
-      },
-      {
-        "id": 2,
-        "name": "Auriculares Negros Con Cable - Tedge",
-        "price": 5,
-        "description": "Con estos pequeños aparatos podés transportar música a cualquier lugar y atender cualquier llamada con su micrófono incorporado. Su gran autonomía de funcionamiento, su control táctil y su compacta caja de carga lo vuelven el elegido por una amplia gama de público.",
-        "categoryId": 1,
-        "stock": 10
-      },
-      {
-        "id": 3,
-        "name": "Mochila Cartera Mujer Urbana Eco Cuero Varios Colores",
-        "price": 17,
-        "description": "Mochila Cartera Trendy Boca de pez.  Medidas: 36 x 26 x 18 cm, confeccionado con tela altamente reforzada anti desgarre y amplio compartimiento central, bolsillo frontal con cierre, interior forrado, logo TRENDY frontal. Bolsillos laterales",
-        "categoryId": 1,
-        "stock": 10
-      },
-      {
-        "id": 4,
-        "name": "Muñeca Viuda Negra 30 Cm Marvel Hasbro",
-        "price": 19,
-        "description": "Con esta figura inspirada en el personaje del Universo Marvel- los fans pueden imaginar al poderoso Vengador enfrentando villanos en una batalla por el destino del mundo",
-        "categoryId": 2,
-        "stock": 10
-      },
-      {
-        "id": 5,
-        "name": "Jeans Mujer Sisa Black Clasico Chupin Tiro Alto",
-        "price": 399,
-        "description": "Jean negro clásico tiro alto, elastizado de excelente calce, es chupin largo arriba del tobillo, marca Sisa. Estos jeans se destacan por la comodidad, y porque los podés combinar con distintos outfits, zapatillas, sandalias, o con lo que mas te guste.",
-        "categoryId": 2,
-        "stock": 10
-      },
-      {
-        "id": 6,
-        "name": "Almohada Viscoelástica Multiflex Relax Pack 2 Unidades",
-        "price": 7,
-        "description": "Mejora la postura. Diseño anatómico. Funda de tela de algodón. Ayuda a la relajación muscular. Es Ideal para tener una postura cómoda y correcta mientras miras televisión o lees.-",
-        "categoryId": 2,
-        "stock": 10
-      },
-      {
-        "id": 7,
-        "name": "Marcador Trabi Chalk Vidrio Tiza Liquida 2mm A 6mm",
-        "price": 32,
-        "description": "Marcador de tinta pigmentada altamente opaca con un rendimiento superior resistente al agua y a la decoloración, para usar en cartón, metal, plástico, vidrio, madera, goma, piedra, etc. Además, permite pintar sobre otra pintura sin que se traspase.",
-        "categoryId": 3,
-        "stock": 10
-      },
-      {
-        "id": 8,
-        "name": "Campera Micro Polar C/ Capucha Aradia Montagne SportLine",
-        "price": 20,
-        "description": "Esta prenda es una excelente segunda piel por sus propiedades térmicas. Con muy poco volumen brinda confort y mantiene la temperatura corporal. Posee un tratamiento antippilling en su cara externa que mantiene por más tiempo el aspecto original de la prenda.",
-        "categoryId": 3,
-        "stock": 10
-      }
-    ],
-    "orders": [
-      {
-        "id": 1,
-        "name": "Natalia Calisaya",
-        "date": "01/06/2020",
-        "shippingAddress": "Av. Corrales 1718",
-        "city": "Córdoba",
-        "pickup": true
-      }
-    ],
-    "detailsOrders": [
-      {
-        "id": 1,
-        "orderId": 1,
-        "quantity": 10,
-        "productName": "Nombres de los productos"
-      }
-    ]
-  }
+      "date": "18/9/2021",
+      "isDelivery": false,
+      "id": 6
+    }
+  ],
+  "detailsOrders": [
+    {
+      "id": 1,
+      "orderId": 1,
+      "quantity": 10,
+      "productName": "Nombres de los productos"
+    },
+    {
+      "details": [
+        {
+          "productId": 1,
+          "productName": "Cable Unipolar Argenplas Normalizado Iram 2.5mm X Rollo 100m",
+          "quantity": 3
+        }
+      ],
+      "orderId": 2,
+      "id": 2
+    },
+    {
+      "details": [
+        {
+          "productId": 2,
+          "productName": "Auriculares Negros Con Cable - Tedge",
+          "quantity": 3
+        }
+      ],
+      "orderId": 3,
+      "id": 3
+    },
+    {
+      "details": [
+        {
+          "productId": 4,
+          "productName": "Muñeca Viuda Negra 30 Cm Marvel Hasbro",
+          "quantity": 1
+        },
+        {
+          "productId": 3,
+          "productName": "Mochila Cartera Mujer Urbana Eco Cuero Varios Colores",
+          "quantity": 1
+        },
+        {
+          "productId": 6,
+          "productName": "Almohada Viscoelástica Multiflex Relax Pack 2 Unidades",
+          "quantity": 1
+        }
+      ],
+      "orderId": 4,
+      "id": 4
+    },
+    {
+      "details": [
+        {
+          "productId": 1,
+          "productName": "Cable Unipolar Argenplas Normalizado Iram 2.5mm X Rollo 100m",
+          "quantity": 2
+        },
+        {
+          "productId": 3,
+          "productName": "Mochila Cartera Mujer Urbana Eco Cuero Varios Colores",
+          "quantity": 1
+        },
+        {
+          "productId": 5,
+          "productName": "Jeans Mujer Sisa Black Clasico Chupin Tiro Alto",
+          "quantity": 1
+        },
+        {
+          "productId": 2,
+          "productName": "Auriculares Negros Con Cable - Tedge",
+          "quantity": 1
+        }
+      ],
+      "orderId": 5,
+      "id": 5
+    },
+    {
+      "details": [
+        {
+          "productId": 4,
+          "productName": "Muñeca Viuda Negra 30 Cm Marvel Hasbro",
+          "quantity": 3
+        }
+      ],
+      "orderId": 6,
+      "id": 6
+    }
+  ]
+}
