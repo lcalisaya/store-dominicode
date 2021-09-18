@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { ChangeDetectionStrategy, Component, OnInit } from '@angular/core';
 import { tap } from 'rxjs/operators';
 import { DataService } from 'src/app/shared/services/data.service';
 import { Store } from 'src/app/shared/interfaces/store.interface';
@@ -16,6 +16,8 @@ export class CheckoutComponent implements OnInit {
     city: ""
   };
 
+  isDelivery = true;
+
   stores: Store[] = [];
 
   constructor(private dataSrv: DataService) { }
@@ -25,14 +27,14 @@ export class CheckoutComponent implements OnInit {
   }
 
   onpickupordelivery(value: boolean): void {
-    console.log(value);
+    this.isDelivery = value;
   }
 
   onSubmit(): void{
     console.log("guardar");
   }
 
-  getStores():void {
+  private getStores():void {
     this.dataSrv.getStores()
     .pipe(
       tap((stores: Store[]) => this.stores = stores)
