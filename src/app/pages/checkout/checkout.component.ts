@@ -6,6 +6,7 @@ import { DataService } from 'src/app/shared/services/data.service';
 import { Store } from 'src/app/shared/interfaces/store.interface';
 import { Details } from 'src/app/shared/interfaces/order.interface';
 import { NgForm } from '@angular/forms';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-checkout',
@@ -26,7 +27,10 @@ export class CheckoutComponent implements OnInit {
 
   cart: Product[] = [];
 
-  constructor(private dataSrv: DataService, private shoppingCartSrv: ShoppingCartService) { }
+  constructor(
+    private dataSrv: DataService, 
+    private shoppingCartSrv: ShoppingCartService,
+    private router: Router) { }
 
   ngOnInit(): void {
     this.getStores();
@@ -48,12 +52,11 @@ export class CheckoutComponent implements OnInit {
 
     this.dataSrv.saveOrder(data).pipe(
       tap(res => console.log('order ->', res)),
-      switchMap( (order) =>{
+      switchMap( ({id: orderId}) =>{
         const details = this.prepareDetails();
-        const orderId = order.id;
         return this.dataSrv.saveDetailsOrder({details, orderId}); 
       }),
-      tap(res => console.log('finish ->', res))
+      tap(() => this.router.navigate(['/thank-you-page']))
     ).subscribe();
   }
 
