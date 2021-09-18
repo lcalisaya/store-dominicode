@@ -1,7 +1,7 @@
 <!-- template de formulario driven -->
 
 <div class="container">
-    <form class="example-form" (ngSubmit)="onSubmit()" #checkoutForm="ngForm">
+    <form class="example-form" #checkoutForm="ngForm">
         <mat-form-field class="form__element">
             <input
               matInput
@@ -65,7 +65,12 @@
 <app-details></app-details> 
 
 <div class="container__button">
-  <button [disabled]="!checkoutForm.form.valid" mat-raised-button color="primary" type="submit">
+  <button 
+    [disabled]="!checkoutForm.form.valid" 
+    mat-raised-button 
+    color="primary" 
+    type="submit"
+    (click)="onSubmit()">
     Checkout
   </button>
 </div>
