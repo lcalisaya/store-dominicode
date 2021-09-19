@@ -73,7 +73,7 @@
       "price": 17,
       "description": "Mochila Cartera Trendy Boca de pez.  Medidas: 36 x 26 x 18 cm, confeccionado con tela altamente reforzada anti desgarre y amplio compartimiento central, bolsillo frontal con cierre, interior forrado, logo TRENDY frontal. Bolsillos laterales",
       "categoryId": 1,
-      "stock": 10
+      "stock": 9
     },
     {
       "id": 4,
@@ -81,7 +81,7 @@
       "price": 19,
       "description": "Con esta figura inspirada en el personaje del Universo Marvel- los fans pueden imaginar al poderoso Vengador enfrentando villanos en una batalla por el destino del mundo",
       "categoryId": 2,
-      "stock": 10
+      "stock": 8
     },
     {
       "id": 5,
@@ -89,7 +89,7 @@
       "price": 399,
       "description": "Jean negro clásico tiro alto, elastizado de excelente calce, es chupin largo arriba del tobillo, marca Sisa. Estos jeans se destacan por la comodidad, y porque los podés combinar con distintos outfits, zapatillas, sandalias, o con lo que mas te guste.",
       "categoryId": 2,
-      "stock": 10
+      "stock": 7
     },
     {
       "id": 6,
@@ -97,7 +97,7 @@
       "price": 7,
       "description": "Mejora la postura. Diseño anatómico. Funda de tela de algodón. Ayuda a la relajación muscular. Es Ideal para tener una postura cómoda y correcta mientras miras televisión o lees.-",
       "categoryId": 2,
-      "stock": 10
+      "stock": 7
     },
     {
       "id": 7,
@@ -113,7 +113,7 @@
       "price": 20,
       "description": "Esta prenda es una excelente segunda piel por sus propiedades térmicas. Con muy poco volumen brinda confort y mantiene la temperatura corporal. Posee un tratamiento antippilling en su cara externa que mantiene por más tiempo el aspecto original de la prenda.",
       "categoryId": 3,
-      "stock": 9
+      "stock": 6
     }
   ],
   "orders": [
@@ -263,6 +263,27 @@
       "date": "18/9/2021",
       "isDelivery": true,
       "id": 14
+    },
+    {
+      "name": "Marta Robles",
+      "shippingAddress": "Av. Juan de Garay, 456",
+      "city": "Balvanera",
+      "date": "18/9/2021",
+      "isDelivery": true,
+      "id": 15
+    },
+    {
+      "name": "Bezael Juarez",
+      "store": {
+        "id": 5,
+        "name": "La Tierra redonda en el Siglo XXI",
+        "address": "Av. Libertad 1199",
+        "city": "Santiago del Estero",
+        "openingHours": "10:00 - 14:00 y 17:00 - 20:30"
+      },
+      "date": "18/9/2021",
+      "isDelivery": false,
+      "id": 16
     }
   ],
   "detailsOrders": [
@@ -427,6 +448,16 @@
       "details": [],
       "orderId": 14,
       "id": 14
+    },
+    {
+      "details": [],
+      "orderId": 15,
+      "id": 15
+    },
+    {
+      "details": [],
+      "orderId": 16,
+      "id": 16
     }
   ]
 }

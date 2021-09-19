@@ -17,7 +17,7 @@ import { ShoppingCartService } from 'src/app/shared/services/shopping-cart.servi
 export class CartComponent {
     quantity$ = this.shoppingCartService.quantityAction$;
     totalPrice$ = this.shoppingCartService.totalAction$;
-    cart$ = this.shoppingCartService.cartAction$;  
+    //cart$ = this.shoppingCartService.cartAction$;  
 
     constructor(private shoppingCartService: ShoppingCartService){ }
      
