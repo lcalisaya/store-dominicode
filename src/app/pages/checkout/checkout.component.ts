@@ -1,7 +1,7 @@
 import { ShoppingCartService } from 'src/app/shared/services/shopping-cart.service';
 import { Product } from './../products/interfaces/product.interface';
 import { ChangeDetectionStrategy, Component, OnInit } from '@angular/core';
-import { switchMap, tap } from 'rxjs/operators';
+import { delay, switchMap, tap } from 'rxjs/operators';
 import { DataService } from 'src/app/shared/services/data.service';
 import { Store } from 'src/app/shared/interfaces/store.interface';
 import { Details } from 'src/app/shared/interfaces/order.interface';
@@ -50,14 +50,18 @@ export class CheckoutComponent implements OnInit {
       isDelivery: this.isDelivery
     }
 
-    this.dataSrv.saveOrder(data).pipe(
+    this.dataSrv.saveOrder(data)
+    .pipe(
       tap(res => console.log('order ->', res)),
-      switchMap( ({id: orderId}) =>{
+      switchMap(({ id: orderId }) => {
         const details = this.prepareDetails();
-        return this.dataSrv.saveDetailsOrder({details, orderId}); 
+        return this.dataSrv.saveDetailsOrder({ details, orderId });
       }),
-      tap(() => this.router.navigate(['/thank-you-page']))
-    ).subscribe();
+      tap(() => this.shoppingCartSrv.resetCart()),
+      delay(2000),
+      tap(() => this.router.navigate(['/checkout/thank-you-page']))
+    )
+    .subscribe();
   }
 
   private getStores():void {

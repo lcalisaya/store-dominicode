@@ -33,6 +33,14 @@ export class ShoppingCartService{
         this.getTotalPrice();
     }
 
+    //Una vez que se terminó la compra el carrito vuelve a 0
+    resetCart(): void {
+        this.cartSubject.next([]);
+        this.totalPriceSubject.next(0);
+        this.quantitySubject.next(0);
+        this.products = [];
+    }
+
     // Agregar un producto al carrito
     private addToCart(product: Product): void {
         //Se busca el producto si existe en el carrito
