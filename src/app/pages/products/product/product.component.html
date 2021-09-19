@@ -6,7 +6,12 @@
     {{miProducto.description}}
     </mat-card-content>
     <mat-card-actions>
-        <button mat-flat-button color="primary" (click)="clickButton()">
+        <button 
+            mat-flat-button 
+            color="primary" 
+            (click)="clickButton()"
+            [disabled]="miProducto.stock === 0"
+        >
             Buy {{miProducto.price | currency}}
             <mat-icon>shopping_basket</mat-icon></button>
     </mat-card-actions>
