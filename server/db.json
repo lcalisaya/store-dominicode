@@ -65,7 +65,7 @@
       "price": 5,
       "description": "Con estos pequeños aparatos podés transportar música a cualquier lugar y atender cualquier llamada con su micrófono incorporado. Su gran autonomía de funcionamiento, su control táctil y su compacta caja de carga lo vuelven el elegido por una amplia gama de público.",
       "categoryId": 1,
-      "stock": 10
+      "stock": 7
     },
     {
       "id": 3,
@@ -113,7 +113,7 @@
       "price": 20,
       "description": "Esta prenda es una excelente segunda piel por sus propiedades térmicas. Con muy poco volumen brinda confort y mantiene la temperatura corporal. Posee un tratamiento antippilling en su cara externa que mantiene por más tiempo el aspecto original de la prenda.",
       "categoryId": 3,
-      "stock": 10
+      "stock": 9
     }
   ],
   "orders": [
@@ -242,6 +242,27 @@
       "date": "18/9/2021",
       "isDelivery": false,
       "id": 12
+    },
+    {
+      "name": "Lidia Brandson",
+      "store": {
+        "id": 2,
+        "name": "Plaza San Martín",
+        "address": "Alcalá 2541 Villa Crespo",
+        "city": "Santa Cruz",
+        "openingHours": "10:00 - 14:00 y 17:00 - 20:30"
+      },
+      "date": "18/9/2021",
+      "isDelivery": false,
+      "id": 13
+    },
+    {
+      "name": "Rodolfo Tames",
+      "shippingAddress": "Carlos Casares 1214",
+      "city": "Buenos Aires",
+      "date": "18/9/2021",
+      "isDelivery": true,
+      "id": 14
     }
   ],
   "detailsOrders": [
@@ -396,6 +417,16 @@
       ],
       "orderId": 12,
       "id": 12
+    },
+    {
+      "details": [],
+      "orderId": 13,
+      "id": 13
+    },
+    {
+      "details": [],
+      "orderId": 14,
+      "id": 14
     }
   ]
 }

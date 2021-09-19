@@ -7,6 +7,7 @@ import { Store } from 'src/app/shared/interfaces/store.interface';
 import { Details } from 'src/app/shared/interfaces/order.interface';
 import { NgForm } from '@angular/forms';
 import { Router } from '@angular/router';
+import { ProductsService } from '../products/services/products.service';
 
 @Component({
   selector: 'app-checkout',
@@ -30,7 +31,8 @@ export class CheckoutComponent implements OnInit {
   constructor(
     private dataSrv: DataService, 
     private shoppingCartSrv: ShoppingCartService,
-    private router: Router) { }
+    private router: Router,
+    private productSrv: ProductsService) {}
 
   ngOnInit(): void {
     this.getStores();
@@ -80,7 +82,14 @@ export class CheckoutComponent implements OnInit {
     const details: Details[] = [];
     this.cart.forEach((product: Product) => {
       const {id:productId, name:productName, qty:quantity, stock} = product;
-      details.push({productId, productName, quantity});
+      const updateStock = stock - quantity;
+
+      this.productSrv.updateStock(productId, updateStock)
+      .pipe(
+        tap(() => details.push({productId, productName, quantity}) )
+      )
+      .subscribe();
+      
     })
     return details;
   }
